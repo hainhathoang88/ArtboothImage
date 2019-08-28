@@ -50,10 +50,14 @@
 
                     var x2 = 0;
                     var imageWidth2 = eventLogo.width;
-                    var imageHeight2 = totalHeight / 6;
+                    var imageHeight2 = imageWidth2 / 4;//eventLogo.height * totalWidth / imageWidth2;
                     var y2 = (eventLogo.height / 2) - (imageHeight2 / 2);
 
-                    myVar.drawImage(eventLogo, x2, y2, imageWidth2, height2, 0, totalHeight * 5 / 6, totalWidth, imageHeight2);
+                    console.log(eventLogo.width + " " + eventLogo.height);
+                    console.log(imageWidth2 + "-" + imageHeight2);
+                    console.log("Total height: " + totalHeight); 
+
+                    myVar.drawImage(eventLogo, x2, y2, imageWidth2, imageHeight2, 0, totalHeight * 5 / 6, totalWidth, totalHeight / 6);
                 }
             }
 
